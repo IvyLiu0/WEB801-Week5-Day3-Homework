@@ -208,6 +208,36 @@ td:first-child{
     background: #BDE1FF;
 }
 
+#activities #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#activities #displaySelected #result, #activities #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#activities #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#activities #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#activities #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+
+
 /* Contact */
 span:first-child{
     font-weight: bold;
