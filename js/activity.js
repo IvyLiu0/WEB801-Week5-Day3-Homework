@@ -8,6 +8,8 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".tdbox").click(function(){ //user select a table data cell
         var content = $(this).text();//get content of cell
+        var cliffName = $(".thead").eq($(this).index()).text();
+        
 
         if (content !="Not Avaiable"){ //check if content does not contain a particular string
             $(this).toggleClass("tdhighlight");//add or remove class when cell is selected
@@ -15,7 +17,7 @@ $(document).ready(function(){
             if ($(this).hasClass("tdhighlight")){//check if selected cell has class
                 $('#displaySelected').css("visibility","visible");//make display box visible
                 $('#displaySelected').css("margin-top","2em");//add spaces above display box
-                $('#result').append("<p>"+content+"</p>");//add child element with contents of cell
+                $('#result').append("<p>"+ content + " at " + cliffName +"</p>");//add child element with contents of cell
             } else {//if selected cell dont have class
                 $('#result p:contains('+content+')').remove();//remove child element
 
